@@ -1,0 +1,81 @@
+.header {
+  height: 10vh;
+  width: 100%;
+  border-bottom: 2px solid $grey;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  overflow: hidden;
+  justify-content: space-between;
+
+  .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .logo__img {
+      line-height: 100%;
+      font-size: 400%;
+      display: flex;
+      align-items: center;
+      text-shadow: 0 0 10px white, 0 0 5px $blue, 0 0 10px $blue, 0 0 15px $blue;
+      padding-bottom: 5%;
+      color: $blue;
+    }
+  
+    .logo__name {
+      margin-left: 1rem;
+      color: $blue;
+      text-shadow: 0 0 10px white, 0 0 20px $blue, 0 0 30px $blue, 0 0 40px $blue;
+      font-size: 160%;
+    }
+  }
+
+  .total-price {
+    display: block;
+
+    span {
+      font-weight: bold;
+    }
+  }
+  
+  .cart {
+    width: 5%;
+    height: 80%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/img/cart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+
+    .total {
+      overflow: hidden;
+      position: relative;
+      width: 40%;
+      padding-bottom: 40%;
+
+      .total__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        border: 1px solid $blue;
+        font-size: 130%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+

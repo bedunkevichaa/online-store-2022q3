@@ -1,0 +1,18 @@
+
+$blue: #209CEE;
+$grey: rgb(190, 190, 190);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(.2rem + 1vw);
+    font-family: Philosopher,sans-serif;
+    word-wrap: break-word;
+}
+
+.container {
+    padding: 0 2% 0 2%;
+}
+
+@import './header';
