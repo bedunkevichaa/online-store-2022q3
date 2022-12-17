@@ -20,6 +20,13 @@ const baseConfig = {
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                },
+            },
+            {
+                test: /\.html$/,
+                use: 'html-loader',
             },
         ],
     },
