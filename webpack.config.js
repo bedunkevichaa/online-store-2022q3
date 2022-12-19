@@ -7,7 +7,7 @@ const EslingPlugin = require('eslint-webpack-plugin');
 
 const baseConfig = {
     devtool: 'source-map',
-    entry: path.resolve(__dirname, './src/js/index'),
+    entry: path.resolve(__dirname, './src/ts/index'),
     mode: 'development',
     module: {
         rules: [
