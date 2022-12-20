@@ -2,6 +2,8 @@
 import '../css/normalize.css';
 import '../css/style.min.css';
 import { products } from './products';
-import filters from './filters';
+import filtersContent from './filtersContent';
+import mainContent from './mainContent';
 
-filters(products);
+filtersContent(products);
+mainContent(products);
