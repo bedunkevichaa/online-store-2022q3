@@ -1,0 +1,32 @@
+
+$blue: #209CEE;
+$grey: rgb(190, 190, 190);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(.2rem + 1vw);
+    font-family: Philosopher,sans-serif;
+    word-wrap: break-word;
+}
+
+body ::-webkit-scrollbar {
+    width: 10px;
+}
+
+body ::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 20px;
+    border: 2px solid $grey;
+}
+body ::-webkit-scrollbar-track {
+    background: $grey;
+}
+
+.container {
+    padding: 0 2% 0 2%;
+}
+
+@import './header';
+@import './main';
