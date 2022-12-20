@@ -6,8 +6,6 @@ const changeView = () => {
     const bigItems = document.querySelectorAll('.big-item');
     const itemsInfo = document.querySelectorAll('.item-info');
 
-   
-
     const toSmallView = () => {
         bigView.classList.remove('active-mode');
         smallView.classList.add('active-mode');
