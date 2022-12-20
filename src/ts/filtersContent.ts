@@ -1,7 +1,7 @@
 import { Product } from './types';
 import { queryElement } from './types';
 
-const filters = (products: Product[]) => {
+const filtersContent = (products: Product[]) => {
     let categoryArray = products.map((el) => el.category);
     categoryArray = [...new Set(categoryArray)];
     console.log(categoryArray);
@@ -48,4 +48,4 @@ const filters = (products: Product[]) => {
     });
 };
 
-export default filters;
+export default filtersContent;

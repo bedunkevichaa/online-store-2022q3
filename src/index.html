@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
     <link rel="manifest" href="assets/fav/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
@@ -35,14 +39,14 @@
                 <div class="category">
                     <h3 class="category__header">Category</h3>
                     <div class="filter-list" id="category-list">
-                    
+
                     </div>
                 </div>
-                
+
                 <div class="brand">
                     <h3 class="category__header">Brand</h3>
                     <div class="filter-list" id="brand-list">
-                    
+
                     </div>
                 </div>
 
@@ -50,7 +54,7 @@
                     <h3 class="category__header">Price</h3>
                     <div class="out-data">
                         <div class="from-data">€10.00</div>
-                        ⟷ 
+                        ⟷
                         <div class="to-data">€1749.00</div>
                     </div>
                     <div class="multi-range">
@@ -63,7 +67,7 @@
                     <h3 class="category__header">Stock</h3>
                     <div class="out-data">
                         <div class="from-data">2</div>
-                        ⟷ 
+                        ⟷
                         <div class="to-data">150</div>
                     </div>
                     <div class="multi-range">
@@ -73,8 +77,53 @@
                 </div>
             </div>
 
-            <div class="products"></div>
+            <div class="products">
+                <div class="sort-products">
+                    <div class="sort-bar">
+                        <select class="ng-untouched ng-pristine ng-valid">
+                            <option value="sort-title" disabled="" selected="" class="sort-name">Sort options:</option>
+                            <option value="price-ASC">Sort by price ASC</option>
+                            <option value="price-DESC">Sort by price DESC</option>
+                            <option value="rating-ASC">Sort by rating ASC</option>
+                            <option value="rating-DESC">Sort by rating DESC</option>
+                            <option value="discount-ASC">Sort by discount ASC</option>
+                            <option value="discount-DESC">Sort by discount DESC</option>
+                        </select>
+                    </div>
+                    <div class="stat">Found: 100</div>
+                    <div class="search-bar">
+                        <input type="search" placeholder="Search product" class="ng-untouched ng-pristine ng-valid">
+                    </div>
+                    <div class="view-mode">
+                        <div class="small-v">
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                        </div>
+                        <div class="big-v active-mode">
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-items">
+                    
+                </div>
+            </div>
         </div>
     </main>
 </body>
+
 </html>

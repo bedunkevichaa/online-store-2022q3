@@ -11,16 +11,16 @@ $grey: rgb(190, 190, 190);
     word-wrap: break-word;
 }
 
-body ::-webkit-scrollbar {
+* ::-webkit-scrollbar {
     width: 10px;
 }
 
-body ::-webkit-scrollbar-thumb {
+* ::-webkit-scrollbar-thumb {
     background-color: $blue;
     border-radius: 20px;
     border: 2px solid $grey;
 }
-body ::-webkit-scrollbar-track {
+* ::-webkit-scrollbar-track {
     background: $grey;
 }
 

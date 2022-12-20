@@ -78,7 +78,7 @@
         position: relative;
         height: 2rem;
 
-        input {
+        input[type="range"] {
           position: absolute;
           -webkit-appearance: none;
           appearance: none;
@@ -90,6 +90,17 @@
           background-size: 100% 2px;
           pointer-events: none;
         }
+
+        input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background: $blue;
+          cursor: ew-resize;
+          box-shadow: 0 0 2px 0 #555;
+          transition: background .3s ease-in-out;
+        }
       }
       .multi-range input:nth-child(2) {
         background: none;
@@ -98,10 +109,177 @@
 
     .products {
       width: 74%;
-      background: rgba(24,26,28,.5);
-      border: 1px solid orange;
-      border-radius: 0.7rem;
+      border-left: 1px solid $grey;
+      border-right: 1px solid $grey;
       overflow: hidden;
+
+      .sort-products {
+        padding: .5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      select {
+        outline: 0;
+        border: 0;
+        flex: 1;
+        padding: 0 1em;
+        cursor: pointer;
+        border-radius: 1rem;
+        color: black;
+        border: 1px solid $grey;
+        text-align: center;
+      }
+
+      .search-bar input {
+        width: 140%;
+        border: 1px solid $grey;
+        color: black;
+        border-radius: 2rem;
+        padding: 0.2rem;
+        outline: none;
+        font-size: 80%;
+        text-align: center;
+      }
+
+      .view-mode {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .small-v, .big-v {
+          border: 1px solid $grey;
+          height: 2rem;
+          width: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: 0.3rem;
+          justify-content: center;
+          align-items: center;
+          padding: 2%;
+          cursor: pointer;
+          margin-left: 0.5rem;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+        
+        .active-mode {
+          box-shadow: 0 0 3px 1px $blue;
+          border: 1px solid $grey;
+        }
+
+        .small-v div {
+          white-space: nowrap;
+          width: 19%;
+          height: 19%;
+          margin: 2%;
+          border-radius: 100%;
+          overflow: hidden;
+          color: white;
+          background: $grey;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+
+        .big-v div {
+          white-space: nowrap;
+          width: 35%;
+          height: 35%;
+          margin: 2%;
+          color: white;
+          border-radius: 100%;
+          overflow: hidden;
+          background: $grey;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+      }
+
+      .products-items {
+        padding: .5%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .big-item {
+          width: 23%;
+          padding-top: 20%;
+          position: relative;
+          // width: 14.6%;
+          // padding-top: 12%;
+          margin: 1%;
+          border: 1px solid $grey;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .item-wrapper {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          background-size: cover;
+        }
+
+        .item-text {
+          width: 100%;
+          height: 83%;
+          cursor: pointer;
+        }
+
+        .item-title {
+          background: rgba(24,26,28,.8);
+          padding: 1%;
+          font-size: 90%;
+          text-align: center;
+          color: white;
+          border-bottom: 1px solid $grey;
+          white-space: nowrap;
+        }
+
+        .item-info-item {
+          width: 55%;
+          background-color: white;
+          opacity: 0.9;
+          border-radius: 0 0 0.4rem;
+          // border-bottom: 1px solid $grey;
+          // border-right: 1px solid $grey;
+          padding: 1%;
+        }
+
+        .item-info-item p  {
+          font-size: .6rem;
+        }
+
+        .item-info-item span  {
+          font-size: .6rem;
+        }
+
+        .item-buttons {
+          width: 100%;
+          height: 15%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        .item-buttons button {
+          background-color: white;
+          color: black;
+          border: 1px solid black;
+          border-radius: 0.3rem;
+          padding-left: 2%;
+          padding-right: 2%;
+          font-size: 80%;
+          cursor: pointer;
+        }
+
+        .in-cart {
+          box-shadow: 0 0 5px 2px $blue;
+          border: 1px solid black;
+      }
+      }
     }
   }
 }
