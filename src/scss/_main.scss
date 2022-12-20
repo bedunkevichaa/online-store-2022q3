@@ -201,6 +201,18 @@
         display: flex;
         flex-wrap: wrap;
 
+        .small-item {
+          position: relative;
+          width: 14.6%;
+          padding-top: 12%;
+          margin: 1%;
+          border: 1px solid $grey;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        }
+
         .big-item {
           width: 23%;
           padding-top: 20%;
@@ -305,4 +317,12 @@
 .checkbox-line span {
   margin-left: auto;
   padding-left: 0.3rem;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
