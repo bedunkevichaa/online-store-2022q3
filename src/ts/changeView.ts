@@ -21,6 +21,7 @@ const changeView = () => {
         });
 
         localStorage.setItem('View', 'smallView');
+        //saveContentLocalStorage();
     };
 
     const toBigView = () => {

@@ -4,8 +4,12 @@ import '../css/style.min.css';
 import { products } from './products';
 import filtersContent from './filtersContent';
 import mainContent from './mainContent';
-import changeView from './changeView';
+import filter from './filters';
+import { loadCheckboxes } from './savelocalStorage';
 
-filtersContent(products);
-mainContent(products);
-changeView();
+document.addEventListener('DOMContentLoaded', () => {
+    filtersContent(products);
+    mainContent(products);
+    filter(products);
+    loadCheckboxes();
+});

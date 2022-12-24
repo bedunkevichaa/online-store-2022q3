@@ -38,3 +38,16 @@ export function queryElement<T extends typeof Element>(
     }
     return el as InstanceType<T>;
 }
+
+export interface Category {
+    [category: string]: number | undefined;
+}
+
+export interface Brand {
+    [brand: string]: number | undefined;
+}
+
+export interface Checkbox {
+    id: string;
+    checked: boolean;
+}

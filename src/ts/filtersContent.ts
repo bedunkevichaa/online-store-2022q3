@@ -1,10 +1,19 @@
 import { Product } from './types';
 import { queryElement } from './types';
+import { Category } from './types';
+import { Brand } from './types';
 
 const filtersContent = (products: Product[]) => {
-    let categoryArray = products.map((el) => el.category);
+    let categoryArray: string[] = products.map((el) => el.category);
+
+    let categoryObj: Category = {};
+    categoryObj = categoryArray.reduce(function (prev: Category, cur) {
+        prev[cur] = (prev[cur] || 0) + 1;
+        return prev;
+    }, {});
+
+    console.log(typeof categoryObj.smartphones);
     categoryArray = [...new Set(categoryArray)];
-    console.log(categoryArray);
 
     categoryArray.forEach((el) => {
         const checkboxLine = document.createElement('div');
@@ -22,12 +31,17 @@ const filtersContent = (products: Product[]) => {
         checkboxLine.appendChild(label);
         label.innerHTML = `${el}`;
         checkboxLine.appendChild(span);
-        span.innerHTML = '(5/5)';
+        span.innerHTML = `(${categoryObj[el]}/${categoryObj[el]})`;
     });
 
     let brandArray = products.map((el) => el.brand);
+    let brandObj: Brand = {};
+    brandObj = brandArray.reduce(function (prev: Brand, cur) {
+        prev[cur] = (prev[cur] || 0) + 1;
+        return prev;
+    }, {});
+
     brandArray = [...new Set(brandArray)];
-    console.log(brandArray);
     brandArray.forEach((el) => {
         const checkboxLine = document.createElement('div');
         checkboxLine.className = 'checkbox-line';
@@ -44,7 +58,7 @@ const filtersContent = (products: Product[]) => {
         checkboxLine.appendChild(label);
         label.innerHTML = `${el}`;
         checkboxLine.appendChild(span);
-        span.innerHTML = '(5/5)';
+        span.innerHTML = `(${brandObj[el]}/${brandObj[el]})`;
     });
 };
 
