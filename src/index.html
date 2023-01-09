@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Store</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/fav/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1 class="header">Hello World!</h1>
+    <header class="header">
+        <div class="logo">
+            <div class="logo__img">🛍</div>
+            <h2 class="logo__name">Online Store</h2>
+        </div>
+        <div class="total-price">Cart total: <span>€4,076.00</span></div>
+        <div class="cart">
+            <div class="total">
+                <div class="total__content">5</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__wrapper">
+            <div class="filters">
+                <div class="reset-total">
+                    <button class="btn-reset">Reset Filters</button>
+                    <button class="btn-copy">Copy Link</button>
+                </div>
+                <div class="category">
+                    <h3 class="category__header">Category</h3>
+                    <div class="filter-list" id="category-list">
+
+                    </div>
+                </div>
+
+                <div class="brand">
+                    <h3 class="category__header">Brand</h3>
+                    <div class="filter-list" id="brand-list">
+
+                    </div>
+                </div>
+
+                <div class="price">
+                    <h3 class="category__header">Price</h3>
+                    <div class="out-data">
+                        <div class="from-data">€<span id="fromInput">10</span>.00</div>
+                        ⟷
+                        <div class="to-data">€<span id="toInput">1749</span>.00</div>
+                    </div>
+                    <div class="multi-range">
+                        <input id="fromSlider" type="range" value="10" min="10" max="1749">
+                        <input id="toSlider" type="range" value="1749" min="10" max="1749">
+                    </div>
+                </div>
+
+                <div class="stock">
+                    <h3 class="category__header">Stock</h3>
+                    <div class="out-data">
+                        <div class="from-data">2</div>
+                        ⟷
+                        <div class="to-data">150</div>
+                    </div>
+                    <div class="multi-range">
+                        <input type="range" min="2" max="150" class="ng-untouched ng-pristine ng-valid">
+                        <input type="range" min="2" max="150" class="ng-untouched ng-pristine ng-valid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="products">
+                <div class="sort-products">
+                    <div class="sort-bar">
+                        <select class="ng-untouched ng-pristine ng-valid">
+                            <option value="sort-title" disabled="" selected="" class="sort-name">Sort options:</option>
+                            <option value="price-ASC">Sort by price ASC</option>
+                            <option value="price-DESC">Sort by price DESC</option>
+                            <option value="rating-ASC">Sort by rating ASC</option>
+                            <option value="rating-DESC">Sort by rating DESC</option>
+                            <option value="discount-ASC">Sort by discount ASC</option>
+                            <option value="discount-DESC">Sort by discount DESC</option>
+                        </select>
+                    </div>
+                    <div class="stat">Found: 100</div>
+                    <div class="search-bar">
+                        <input type="search" placeholder="Search product" class="ng-untouched ng-pristine ng-valid">
+                    </div>
+                    <div class="view-mode">
+                        <div class="small-v">
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                        </div>
+                        <div class="big-v active-mode">
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                            <div>.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-items">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
