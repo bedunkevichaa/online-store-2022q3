@@ -53,13 +53,13 @@
                 <div class="price">
                     <h3 class="category__header">Price</h3>
                     <div class="out-data">
-                        <div class="from-data">€10.00</div>
+                        <div class="from-data">€<span id="fromInput">10</span>.00</div>
                         ⟷
-                        <div class="to-data">€1749.00</div>
+                        <div class="to-data">€<span id="toInput">1749</span>.00</div>
                     </div>
                     <div class="multi-range">
-                        <input type="range" min="0" max="48" class="ng-untouched ng-pristine ng-valid">
-                        <input type="range" min="0" max="48" class="ng-untouched ng-pristine ng-valid">
+                        <input id="fromSlider" type="range" value="10" min="10" max="1749">
+                        <input id="toSlider" type="range" value="1749" min="10" max="1749">
                     </div>
                 </div>
 
@@ -71,8 +71,8 @@
                         <div class="to-data">150</div>
                     </div>
                     <div class="multi-range">
-                        <input type="range" min="0" max="75" class="ng-untouched ng-pristine ng-valid">
-                        <input type="range" min="0" max="75" class="ng-untouched ng-pristine ng-valid">
+                        <input type="range" min="2" max="150" class="ng-untouched ng-pristine ng-valid">
+                        <input type="range" min="2" max="150" class="ng-untouched ng-pristine ng-valid">
                     </div>
                 </div>
             </div>

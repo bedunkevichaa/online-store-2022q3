@@ -12,7 +12,7 @@ const filtersContent = (products: Product[]) => {
         return prev;
     }, {});
 
-    console.log(typeof categoryObj.smartphones);
+    // console.log(typeof categoryObj.smartphones);
     categoryArray = [...new Set(categoryArray)];
 
     categoryArray.forEach((el) => {

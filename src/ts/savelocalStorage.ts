@@ -15,7 +15,6 @@ export const saveCheckboxes = () => {
 export const loadCheckboxes = () => {
     const checkboxes = JSON.parse(localStorage.getItem('inputs') || '{}') as NodeListOf<HTMLInputElement>;
     checkboxes.forEach((el) => {
-        //document.getElementById(el.id).checked = el.checked || '';
         queryElement(document, HTMLInputElement, `#${el.id}`).checked = el.checked;
     });
 };

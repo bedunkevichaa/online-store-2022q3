@@ -4,15 +4,17 @@ import loadContent from './loadContent';
 import changeView from './changeView';
 import { saveCheckboxes } from './savelocalStorage';
 import { saveContentLocalStorage } from './savelocalStorage';
+// import { products } from './products';
 
 const filter = (products: Product[]) => {
-    const checkboxes = document.querySelectorAll("input[type='checkbox']") as NodeListOf<HTMLInputElement>;
+    const productsItem = queryElement(document, HTMLDivElement, '.products-items');
+    const searchURL = new URL(window.location.href);
+    let checkboxCategoryValues: string[] = [];
+    let checkboxBrandValues: string[] = [];
+    const checkboxesBrand = document.querySelectorAll(".brand input[type='checkbox']") as NodeListOf<HTMLInputElement>;
     const checkboxesCategory = document.querySelectorAll(
         ".category input[type='checkbox']"
     ) as NodeListOf<HTMLInputElement>;
-    const checkboxesBrand = document.querySelectorAll(".brand input[type='checkbox']") as NodeListOf<HTMLInputElement>;
-    let checkboxCategoryValues: string[] = [];
-    let checkboxBrandValues: string[] = [];
 
     const isChecked = () => {
         return document.querySelectorAll('input:checked').length === 0 ? false : true;
@@ -23,6 +25,8 @@ const filter = (products: Product[]) => {
     const isCheckedCategory = () => {
         return document.querySelectorAll('.category input:checked').length === 0 ? false : true;
     };
+
+    const checkboxes = document.querySelectorAll("input[type='checkbox']") as NodeListOf<HTMLInputElement>;
 
     checkboxes.forEach((box) => {
         // box.checked = false;
@@ -45,13 +49,10 @@ const filter = (products: Product[]) => {
         return checkboxBrandValues;
     }
 
-    function filterCards() {
-        const productsItem = queryElement(document, HTMLDivElement, '.products-items');
-        const searchURL = new URL(window.location.href);
+    const filterCards = () => {
         checkboxCategoryValues = grabCheckboxCategoryValues();
         checkboxBrandValues = grabCheckboxBrandValues();
         productsItem.innerHTML = '';
-
         products.forEach((el) => {
             if (checkboxCategoryValues.includes(el.category) && checkboxBrandValues.includes(el.brand)) {
                 loadContent(el);
@@ -81,7 +82,8 @@ const filter = (products: Product[]) => {
         saveCheckboxes();
         saveContentLocalStorage();
         window.history.pushState({}, '', searchURL);
-    }
+        // rangeInputs();
+    };
 };
 
 export default filter;
